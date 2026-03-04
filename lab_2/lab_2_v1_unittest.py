@@ -22,4 +22,4 @@ class TestHamsters(unittest.TestCase):
         self.assertEqual(max_hamsters(S, C, hamsters), 1)
 
 if __name__ == '__main__':
-    unittest.main
+    unittest.main()
