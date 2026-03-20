@@ -18,7 +18,12 @@ class BinaryTreeSuccessor:
         nodes = []
         self.inorder(nodes)
         
-        for i in range(len(nodes) - 1):
-            if nodes[i] == target_node:
-                return nodes[i + 1]
+        found_target = False
+        
+        for node in nodes:
+            if found_target and node.value > target_node.value:
+                return node
+            if node == target_node:
+                found_target = True
+                
         return None
